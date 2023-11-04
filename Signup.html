@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+
+    <!--CSS Styling encapsulated here-->
+    <style>
+        /*non contained body*/
+        body {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        /*form input styling*/
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /*input text styling*/
+        input {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("signup-form");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Simple validation (you can add more complex validation as needed)
+            if (name.trim() === "" || email.trim() === "" || password.trim() === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            alert(`Sign-up successful!\nName: ${name}\nEmail: ${email}`);
+            form.reset();
+        });
+    </script>
+</body>
+</html>

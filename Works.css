@@ -78,7 +78,7 @@ img.ice-cream-left {
 /* Text in Rectangle Styling */
 .worksText {
     color: rgb(255, 255, 255); 
-    font-size: 100px;
+    font-size: 8em;
     font-weight: bolder;
 }
 
@@ -99,7 +99,7 @@ img.ice-cream-left {
 /*text in reportText styling*/
 .reportText {
     color: white;
-    font-size: 33px;
+    font-size: 2em;
 }
 
 /*hyperlink text in report*/
