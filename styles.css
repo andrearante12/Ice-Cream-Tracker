@@ -16,13 +16,42 @@ body {
 .navbar ul {
     list-style-type: none;
     background-color: rgb(217, 217, 217, 0.5);
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
 }
 
-img {
+/*nav bar elements styling*/
+.navbar a{
+    color: rgb(12, 49, 7);
+    text-decoration:wavy;
+    padding: 15px;
+}
+
+/*nav bar hover styling*/
+.navbar a:hover {
+    background-color: rgb(124, 124, 124, 40%);
+}
+
+/*nav bar list format styling*/
+.navbar li{
+    float: left;
+}
+
+/*styling for ice cream image on right*/
+img.ice-cream-right {
     position: absolute;
-    top: 45%; /* Move the image 50% down from the top */
-    left: 0; /* Align the image to the left */
-    transform: translateY(-50%); /* Center the image vertically */
+    top: 45%; /* Move the image 45% down from the top */
+    right: 0; 
+    transform: translateY(-25%); /* Center the image vertically */
+}
+
+/*styling for ice cream image on right*/
+img.ice-cream-left {
+    position: absolute;
+    top: 45%; /* Move the image 45% down from the top */
+    left: 0; 
+    transform: translateY(-25%); /* Center the image vertically */
 }
 
 /* Rectanlge Styling */
