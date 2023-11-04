@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ice Cream Report Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- <js>brokenForm.js</js> -->
+  </head>
+  <body>
+    <main>
+        <h1>Ice Cream Broken Report Form</h1> 
+        <form id="form">
+ 
+            <!-- Details -->
+            <div class="form-control">
+                <label for="name" id="label-name">
+                    Report
+                </label>
+     
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your GW Email" />
+            </div>
+      
+            <div class="form-control">
+                <label>
+                    Is it working?
+                </label>
+     
+                <!-- Yes / no -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Yes</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">No</input>
+                </label>
+            </div>
+    
+            <!-- Submission -->
+            <button type="submit" value="submit">
+                Submit
+            </button>
+        </form> 
+    </main>
+	<script src="brokenForm.js"></script>
+  </body>
+</html>
