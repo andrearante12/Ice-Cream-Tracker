@@ -8,14 +8,14 @@
 
 /* background image and color */
 body {
-    background: rgb(179, 229, 179);
-    background-image: url("assets/ConfettiBackground.gif");
+    background: rgb(139, 161, 232);
+    background-image: url("assets/RainFalling.gif");
 }
 
 /*nav bar styling*/
 .navbar ul {
     list-style-type: none;
-    background-color: rgb(217, 217, 217, 0.5);
+    background-color: rgba(217, 217, 217, 0.5);
     padding: 10px;
     margin: 10px;
     overflow: hidden;
@@ -46,7 +46,7 @@ body {
 /*styling for ice cream image on right*/
 img.ice-cream-right {
     position: absolute;
-    top: 45%; /* Move the image 45% down from the top */
+    top: 42%; /* Move the image 45% down from the top */
     right: 0; 
     transform: translateY(-25%); /* Center the image vertically */
 }
@@ -54,23 +54,38 @@ img.ice-cream-right {
 /*styling for ice cream image on right*/
 img.ice-cream-left {
     position: absolute;
-    top: 45%; /* Move the image 45% down from the top */
+    top: 42%; /* Move the image 45% down from the top */
     left: 0; 
     transform: translateY(-25%); /* Center the image vertically */
 }
 
-/* Rectanlge Styling */
-.rectangle{
+/* Broken Rectanlge Styling */
+.broken{
     width: 50%;
     height: 250px;
     background: radial-gradient(
-        50% 50%, rgb(214, 214, 214), rgb(40, 230, 40)
+        50% 50%, rgb(43, 13, 154), rgb(88, 126, 213)
     );
     border-radius: 68px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 190px auto 0;
+    margin: 20px auto 0;
+
+    pointer-events: none;
+}
+
+.report {
+    width: 50%;
+    height: 250px;
+    background: radial-gradient(
+        50% 50%, rgb(43, 13, 154), rgb(88, 126, 213)
+    );
+    border-radius: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto 0;
 
     pointer-events: none;
 }
