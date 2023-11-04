@@ -85,7 +85,7 @@
 
         isWorkingBtn.addEventListener('click', () => {
             isWorking = true;
-            console.log("IS working! " + isWorking)
+            console.log("Is working! " + isWorking)
 
         } );
         isNotWorkingBtn.addEventListener('click', () => {
@@ -93,8 +93,6 @@
             console.log("Is not working! " + isWorking);
         } );
         
-        // console.log(isWorking);
-
         function updateDatabase() {
             set(ref(db, "Main/"), {
                 working: isWorking,
