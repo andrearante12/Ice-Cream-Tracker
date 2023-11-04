@@ -7,9 +7,9 @@
     <title>Ice Cream Report Form</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <!-- <js>brokenForm.js</js> -->
   </head>
   <body>
+    <script src="brokenForm.js"></script>
     <main>
         <h1>Ice Cream Broken Report Form</h1> 
         <form id="form">
@@ -33,23 +33,21 @@
      
                 <!-- Yes / no -->
                 <label for="recommed-1">
-                    <input type="radio"
-                           id="recommed-1"
-                           name="recommed">Yes</input>
+                    <button id="op-1"
+                            name="Yes">Yes</button>
                 </label>
                 <label for="recommed-2">
-                    <input type="radio"
-                           id="recommed-2"
-                           name="recommed">No</input>
+                    <button id="op-2"
+                            name="No">No</button>
                 </label>
             </div>
     
             <!-- Submission -->
-            <button type="submit" value="submit">
+            <button type="submit" value="submit" onclick="submit()">
                 Submit
             </button>
         </form> 
     </main>
-	<script src="brokenForm.js"></script>
+	<!--<script src="brokenForm.js"></script>-->
   </body>
 </html>
