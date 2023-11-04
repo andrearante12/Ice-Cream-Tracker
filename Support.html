@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<style>
+    /* applies to all */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+
+    body {
+        background-color: aqua;
+    }
+
+    /*nav bar elements styling*/
+    .navbar ul {
+        list-style-type: none;
+        background-color: rgb(217, 217, 217, 0.5);
+        padding: 10px;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    /*nav bar styling*/
+    .navbar a{
+        color: rgb(12, 49, 7);
+        text-decoration:wavy;
+        padding: 15px;
+    }
+
+    /*nav bar hover styling*/
+    .navbar a:hover {
+        background-color: rgb(124, 124, 124, 40%);
+    }
+
+    /*nav bar list format styling*/
+    .navbar li{
+        float: left;
+    }
+
+    /*top message formatting*/
+    .topMessage {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align:center;
+        font-size: 5rem;
+        color:rgb(217, 29, 117)
+    }
+
+    /*venmo and email info*/
+    p {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align:center;
+        font-size: 3.3rem;
+        color:rgb(200, 181, 41)
+    }
+
+    .Praying {
+        position: absolute;
+        top: 30%; /* Move the image 45% down from the top */
+        left: 0; 
+        transform: translateY(-25%); /* Center the image vertically */
+    }
+</style>
+
+<html>
+    <head>
+        <title>Support Us!</title>
+    </head>
+    <body>
+
+        <!--Nav Bar-->
+        <nav class="navbar">
+            <ul>
+                <!--Elements on left side of navbar-->
+                <li><a href="">Works?</a></li>
+                <li><a href="leaderboards.html">Leaderboards</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Support Us</a></li>
+            </ul>
+        </nav>
+
+        <div class = "topMessage">
+            <strong>Support Us!</strong>
+        </div>
+
+        <p>
+            Venmo: stefan-cohn <br>
+            Email: stefancohn@gmail.com
+        </p>
+
+        <!--praying image-->
+        <img src="assets/Praying.gif" height="300" width="300" class="Praying">
+    </body>
+</html>
