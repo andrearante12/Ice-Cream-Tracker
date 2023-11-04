@@ -9,7 +9,7 @@
 /* background image and color */
 body {
     background: rgb(179, 229, 179);
-    background-image:url(https://www.icegif.com/wp-content/uploads/2023/02/icegif-1172.gif);
+    background-image: url("assets/ConfettiBackground.gif");
 }
 
 /*nav bar styling*/
