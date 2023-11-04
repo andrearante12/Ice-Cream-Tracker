@@ -9,7 +9,6 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <script src="brokenForm.js"></script>
     <main>
         <h1>Ice Cream Broken Report Form</h1> 
         <form id="form">
@@ -34,11 +33,11 @@
                 <!-- Yes / no -->
                 <label for="recommed-1">
                     <button id="op-1"
-                            name="Yes">Yes</button>
+                            name="Yes" onclick="clicked('Yes')">Yes</button>
                 </label>
                 <label for="recommed-2">
                     <button id="op-2"
-                            name="No">No</button>
+                            name="No" onclick="clicked('No')">No</button>
                 </label>
             </div>
     
@@ -48,6 +47,6 @@
             </button>
         </form> 
     </main>
-	<!--<script src="brokenForm.js"></script>-->
+    <script src="brokenForm.js"></script>
   </body>
 </html>
