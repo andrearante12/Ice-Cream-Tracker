@@ -94,7 +94,8 @@
 
         const db = getDatabase();
 
-        var name = document.querySelector("#name");
+        var email = document.querySelector("#name").value;
+        console.log(email)
 
         var submitBtn = document.querySelector("#submit");
         var isWorkingBtn = document.querySelector("#op-1");
@@ -119,8 +120,56 @@
             .then(() => alert("Data Uploaded Successfully!"))
             .catch((error) => alert(error))
         }
+
+
+        function updateUser() {
+
+            const dbref = ref(db);
+
+            var email = document.querySelector("#name").value;
+            var username = email.split(".")[0];
+
+            get(child(dbref, "Users/"))
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                        
+                    // If user already exists add one to points
+                    if (username in snapshot.val() ) {
+
+                        let newPoints = snapshot.val()[username].points + 1;
+
+                        set(ref(db, "Users/" + email.split(".")[0]), {
+                        email: email,
+                        points: newPoints
+                        })
+                        .then(() => alert("Data Uploaded Successfully!"))
+                        .catch((error) => alert(error))
+                    } 
+                    // If user doesn't exist create a new user with 1 points
+                    else {
+                        set(ref(db, "Users/" + email.split(".")[0]), {
+                        email: email,
+                        points: 1
+                        })
+                        .then(() => alert("Data Uploaded Successfully!"))
+                        .catch((error) => alert(error))
+                    }
+                }
+                else {
+                    set(ref(db, "Users/" + email.split(".")[0]), {
+                        email: email,
+                        points: 1
+                        })
+                        .then(() => alert("Data Uploaded Successfully!"))
+                        .catch((error) => alert(error))
+                }
+            })
+        }
         
-        submitBtn.addEventListener('click', updateDatabase);
+        submitBtn.addEventListener('click', () => {
+            updateDatabase()
+            updateUser()
+        });
 
 
       </script>
