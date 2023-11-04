@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ice Cream Report Form</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <body>
     <main>
@@ -29,24 +29,49 @@
                 <label>
                     Is it working?
                 </label>
-     
+                <br>
+                <br>
                 <!-- Yes / no -->
                 <label for="recommed-1">
                     <button id="op-1"
-                            name="Yes" onclick="clicked('Yes')">Yes</button>
+                             onclick="pressed('Yes')" type="button" class="btn btn-success">Yes</button>
                 </label>
+                <br><br>
                 <label for="recommed-2">
                     <button id="op-2"
-                            name="No" onclick="clicked('No')">No</button>
+                             onclick="pressed('No')" type="button" class="btn btn-danger">No</button>
                 </label>
             </div>
     
             <!-- Submission -->
-            <button type="submit" value="submit" onclick="submit()">
+            <button type="button" onclick="save()">
                 Submit
             </button>
         </form> 
     </main>
+    
+    <!-- Imports for Firebase -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyD53jgHd03NBEoe21v3CYBm9uAFmh05QXY",
+          authDomain: "ice-cream-tracker-5715e.firebaseapp.com",
+          projectId: "ice-cream-tracker-5715e",
+          storageBucket: "ice-cream-tracker-5715e.appspot.com",
+          messagingSenderId: "90548603371",
+          appId: "1:90548603371:web:61c507292684ec1bbab1ae"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+      
+    <script src="index.js"></script>
     <script src="brokenForm.js"></script>
   </body>
 </html>
