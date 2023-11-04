@@ -5,21 +5,29 @@
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
+/* url */
+body {
+    background-image:url(https://www.icegif.com/wp-content/uploads/2023/02/icegif-1172.gif);
+    background-position: 0 50px; 
+}
+
 /* Rectanlge Styling */
 .rectangle{
     width: 50%;
     height: 300px;
-    background: rgb(55, 176, 55);
+    background: radial-gradient(
+        50% 50%, rgb(214, 214, 214), rgb(40, 230, 40)
+    );
     border-radius: 68px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 100px auto 0;
 }
 
 /* Text in Rectangle Styling */
 .center {
-    color: rgb(230, 230, 230); 
+    color: rgb(255, 255, 255); 
     font-size: 100px;
     font-weight: bolder;
 }
