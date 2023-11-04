@@ -21,11 +21,6 @@ body {
     overflow: hidden;
 }
 
-/* Style the right elements and their links */
-.navbar .right {
-    float: right;
-}
-
 /*nav bar elements styling*/
 .navbar a{
     color: rgb(12, 49, 7);
