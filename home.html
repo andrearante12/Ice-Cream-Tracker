@@ -1,0 +1,66 @@
+<!D0CTYPE html>
+
+<html>
+    <head>
+        <title>Thurston Ice Cream!!!</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!--
+        <meta http-equiv="refresh" content="0; url='https://www.w3docs.com'" /> 
+        <script type="text/javascript" src="script.js"></script>
+        -->        
+
+    <body>
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+            apiKey: "AIzaSyD53jgHd03NBEoe21v3CYBm9uAFmh05QXY",
+            authDomain: "ice-cream-tracker-5715e.firebaseapp.com",
+            projectId: "ice-cream-tracker-5715e",
+            storageBucket: "ice-cream-tracker-5715e.appspot.com",
+            messagingSenderId: "90548603371",
+            appId: "1:90548603371:web:61c507292684ec1bbab1ae"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            import {getDatabase, set, get, update, remove, ref, child}
+            from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+
+            const db = getDatabase();
+
+            const dbref = ref(db);
+            
+            const checkIfWorking = () => {
+                let broken = false;
+                
+                get(child(dbref, "Main/"))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        broken = snapshot.val().working;
+                        console.log("Snapshot exists and working =  " + broken)
+                        
+                        if(!broken){
+                            window.location.replace("Broken.html")
+                            console.log("displaying broken screen")
+                        }
+                        else{
+                            window.location.replace("Works.html")
+                            console.log("displaying works screen")
+                        }
+                    }
+                    else {
+                        alert("No data found")
+                    }
+                }).catch((error) => {
+                    alert(error);
+                })
+            }
+        </script>
+        
+    </body>
+
+</html>
