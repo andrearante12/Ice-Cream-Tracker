@@ -4,3 +4,22 @@
     box-sizing: border-box;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+
+/* Rectanlge Styling */
+.rectangle{
+    width: 50%;
+    height: 300px;
+    background: rgb(55, 176, 55);
+    border-radius: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Text in Rectangle Styling */
+.center {
+    color: rgb(230, 230, 230); 
+    font-size: 100px;
+    font-weight: bolder;
+}
