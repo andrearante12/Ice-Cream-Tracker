@@ -29,7 +29,7 @@ body {
 /*nav bar elements styling*/
 .navbar a{
     color: rgb(12, 49, 7);
-    text-decoration:wavy;
+    text-decoration:none;
     padding: 15px;
 }
 
@@ -46,7 +46,7 @@ body {
 /*styling for ice cream image on right*/
 img.ice-cream-right {
     position: absolute;
-    top: 42%; /* Move the image 45% down from the top */
+    top: 40%; /* Move the image 45% down from the top */
     right: 0; 
     transform: translateY(-25%); /* Center the image vertically */
 }
@@ -54,7 +54,7 @@ img.ice-cream-right {
 /*styling for ice cream image on right*/
 img.ice-cream-left {
     position: absolute;
-    top: 42%; /* Move the image 45% down from the top */
+    top: 40%; /* Move the image 45% down from the top */
     left: 0; 
     transform: translateY(-25%); /* Center the image vertically */
 }
@@ -70,14 +70,22 @@ img.ice-cream-left {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto 0;
+    margin: 80px auto 0;
 
     pointer-events: none;
 }
 
+/* Text in Broken Rectangle Styling */
+.brokenText {
+    color: rgb(255, 255, 255); 
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+/* Report status rectangle styling */
 .report {
-    width: 50%;
-    height: 250px;
+    width: 30%;
+    height: 150px;
     background: radial-gradient(
         50% 50%, rgb(43, 13, 154), rgb(88, 126, 213)
     );
@@ -85,14 +93,16 @@ img.ice-cream-left {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 100px auto 0;
-
-    pointer-events: none;
+    margin: 50px auto 0;
 }
 
-/* Text in Rectangle Styling */
-.center {
-    color: rgb(255, 255, 255); 
-    font-size: 100px;
-    font-weight: bolder;
+/*text in reportText styling*/
+.reportText {
+    color: white;
+    font-size: 33px;
+}
+
+/*hyperlink text in report*/
+.reportHyperLink {
+    text-decoration: none;
 }
