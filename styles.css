@@ -1,3 +1,4 @@
+/* applies to all */
 * {
     margin: 0;
     padding: 0;
@@ -5,16 +6,29 @@
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-/* url */
+/* background image and color */
 body {
+    background: rgb(179, 229, 179);
     background-image:url(https://www.icegif.com/wp-content/uploads/2023/02/icegif-1172.gif);
-    background-position: 0 50px; 
+}
+
+/*nav bar styling*/
+.navbar ul {
+    list-style-type: none;
+    background-color: rgb(217, 217, 217, 0.5);
+}
+
+img {
+    position: absolute;
+    top: 45%; /* Move the image 50% down from the top */
+    left: 0; /* Align the image to the left */
+    transform: translateY(-50%); /* Center the image vertically */
 }
 
 /* Rectanlge Styling */
 .rectangle{
     width: 50%;
-    height: 300px;
+    height: 250px;
     background: radial-gradient(
         50% 50%, rgb(214, 214, 214), rgb(40, 230, 40)
     );
@@ -22,7 +36,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 100px auto 0;
+    margin: 190px auto 0;
 }
 
 /* Text in Rectangle Styling */
