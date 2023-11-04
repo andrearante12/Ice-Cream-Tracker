@@ -7,12 +7,92 @@
 
 
     <body>
-        <div id = "box"></div>
-        <div id = "box2"></div>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Points</td>
+            </tr>
+        </table>
 
-        <ul id="arrayList"></ul>
-        <ul id="arrayList2"></ul>
-        <script src="leaderboardScript.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+            apiKey: "AIzaSyD53jgHd03NBEoe21v3CYBm9uAFmh05QXY",
+            authDomain: "ice-cream-tracker-5715e.firebaseapp.com",
+            projectId: "ice-cream-tracker-5715e",
+            storageBucket: "ice-cream-tracker-5715e.appspot.com",
+            messagingSenderId: "90548603371",
+            appId: "1:90548603371:web:61c507292684ec1bbab1ae"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            import {getDatabase, set, get, update, remove, ref, child}
+            from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+            
+            const db = getDatabase();
+            const dbref = ref(db);
+
+            
+
+            get(child(dbref, "Users/"))
+            .then((snapshot) => {
+
+                const users = snapshot.val()
+                console.log(users)
+                
+                var names = []
+                for (let user in users) {
+                    console.log(user)
+                    names = [...names, user]
+                }
+
+                var scores = []
+                names.forEach((name) => scores = [...scores, users[name].points])
+
+                var temp = 0;
+                var tempStr = "";
+
+                // sort scores
+                for (let i = 0; i < scores.length - 1; i++) {
+                    if (scores[i] < scores[i + 1]) {
+                        // score sorting
+                        temp = scores[i];
+                        scores[i] = scores[i + 1];
+                        scores[i + 1] = temp;
+
+                        tempStr = names[i];
+                        names[i] = names[i + 1];
+                        names[i + 1] = tempStr;
+                        
+                        i = -1;
+                    }
+                }
+
+                console.log(names)
+                console.log(scores)
+
+                var table = document.querySelector('table');
+
+                for (let i = 0; i < names.length; i++) {
+                    let template =  `
+                        <tr>
+                            <td>${names[i]}</td>
+                            <td>${scores[i]}</td>
+                        </tr>
+                    `;
+                    table.innerHTML += template;
+                }
+
+
+            })
+            
+        </script>
         
     </body>
+
+
 </html>
