@@ -59,25 +59,50 @@ img.ice-cream-left {
     transform: translateY(-25%); /* Center the image vertically */
 }
 
-/* Rectanlge Styling */
-.rectangle{
+/*Works Rectanlge Styling */
+.works{
     width: 50%;
     height: 250px;
     background: radial-gradient(
-        50% 50%, rgb(15, 98, 11), rgb(40, 230, 40)
+        50% 50%, rgb(10, 60, 7), rgb(35, 194, 35)
     );
     border-radius: 68px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 190px auto 0;
+    margin: 80px auto 0;
 
     pointer-events: none;
 }
 
 /* Text in Rectangle Styling */
-.center {
+.worksText {
     color: rgb(255, 255, 255); 
     font-size: 100px;
     font-weight: bolder;
+}
+
+/* Report status rectangle styling */
+.report {
+    width: 30%;
+    height: 150px;
+    background: radial-gradient(
+        50% 50%, rgb(80, 174, 3), rgb(112, 233, 91)
+    );
+    border-radius: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 0;
+}
+
+/*text in reportText styling*/
+.reportText {
+    color: white;
+    font-size: 33px;
+}
+
+/*hyperlink text in report*/
+.reportHyperLink {
+    text-decoration: none;
 }
