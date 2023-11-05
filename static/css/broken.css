@@ -8,40 +8,14 @@
 
 /* background image and color */
 body {
-    background: rgb(179, 229, 179);
-    background-image: url("assets/ConfettiBackground.gif");
-}
-
-/*nav bar styling*/
-.navbar ul {
-    list-style-type: none;
-    background-color: rgb(217, 217, 217, 0.5);
-    padding: 10px;
-    margin: 10px;
-    overflow: hidden;
-}
-
-/*nav bar elements styling*/
-.navbar a{
-    color: rgb(12, 49, 7);
-    text-decoration:wavy;
-    padding: 15px;
-}
-
-/*nav bar hover styling*/
-.navbar a:hover {
-    background-color: rgb(124, 124, 124, 40%);
-}
-
-/*nav bar list format styling*/
-.navbar li{
-    float: left;
+    background: rgb(139, 161, 232);
+    background-image: url("../../assets/RainFalling.gif");
 }
 
 /*styling for ice cream image on right*/
 img.ice-cream-right {
     position: absolute;
-    top: 45%; /* Move the image 45% down from the top */
+    top: 40%; /* Move the image 45% down from the top */
     right: 0; 
     transform: translateY(-25%); /* Center the image vertically */
 }
@@ -49,17 +23,17 @@ img.ice-cream-right {
 /*styling for ice cream image on right*/
 img.ice-cream-left {
     position: absolute;
-    top: 45%; /* Move the image 45% down from the top */
+    top: 40%; /* Move the image 45% down from the top */
     left: 0; 
     transform: translateY(-25%); /* Center the image vertically */
 }
 
-/*Works Rectanlge Styling */
-.works{
+/* Broken Rectanlge Styling */
+.broken{
     width: 50%;
     height: 250px;
     background: radial-gradient(
-        50% 50%, rgb(10, 60, 7), rgb(35, 194, 35)
+        50% 50%, rgb(43, 13, 154), rgb(88, 126, 213)
     );
     border-radius: 68px;
     display: flex;
@@ -70,8 +44,8 @@ img.ice-cream-left {
     pointer-events: none;
 }
 
-/* Text in Rectangle Styling */
-.worksText {
+/* Text in Broken Rectangle Styling */
+.brokenText {
     color: rgb(255, 255, 255); 
     font-size: 8em;
     font-weight: bolder;
@@ -82,19 +56,19 @@ img.ice-cream-left {
     width: 30%;
     height: 150px;
     background: radial-gradient(
-        50% 50%, rgb(80, 174, 3), rgb(112, 233, 91)
+        50% 50%, rgb(112, 193, 255), rgb(40, 136, 220)
     );
     border-radius: 68px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px auto 0;
+    margin: 2em auto 0;
 }
 
 /*text in reportText styling*/
 .reportText {
     color: white;
-    font-size: 2em;
+    font-size: 33px;
 }
 
 /*hyperlink text in report*/

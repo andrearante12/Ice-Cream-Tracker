@@ -1,0 +1,30 @@
+
+/*nav bar styling*/
+.navbar ul {
+    list-style-type: none;
+    background-color: rgba(217, 217, 217, 0.5);
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+/*nav bar elements styling*/
+.navbar a{
+    color: rgb(12, 49, 7);
+    text-decoration:none;
+    padding: 15px;
+}
+
+/*nav bar hover styling*/
+.navbar a:hover {
+    background-color: rgb(124, 124, 124, 40%);
+}
+
+/*nav bar list format styling*/
+.navbar li{
+    float: left;
+}
+
+li.right {
+    float: right;
+}

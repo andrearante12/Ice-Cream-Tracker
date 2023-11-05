@@ -7,78 +7,47 @@
     <title>Ice Cream Report Form</title>
     <!-- <link rel="stylesheet" href="./style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="new.css"> 
+    <link rel="stylesheet" type="text/css" href="../static/css/broken.css"> 
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css"> 
+
 
 </head>
   <body>
     <main>
 
         <!--Nav Bar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="home.html">Works?</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="leaderboards.html">Leaderboards</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href=""class="nav-link">Support Us</a>
-                  </li>
-              </div>
+        <nav class="navbar">
+            <ul>
+                <!--Elements on left side of navbar-->
+                <li><a href="../home.html">Works?</a></li>
+                <li><a href="leaderboards.html">Leaderboards</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="support.html">Support Us</a></li>
+
+                <!--Elements on right side of navbar-->
+                <li class="right"> <a href="#">Login</a></li>
+                <li class="right"> <a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+
+        <!--"Broken" Rectangle-->
+        <div class="broken">
+            <h1 class = "brokenText">broken😔</h1>
+        </div>
+
+        <!--"ReportText" Rectangle-->
+        <a class ="reportHyperLink" href="form.html">
+            <div class="report">
+                <h1 class = "reportText">report machine status🚩</h1>
             </div>
-          </nav>
+        </a>
 
+        <!--Spinning Ice Cream Image Right-->
+        <img src="../assets/Crying.gif" height="300" width="300" class="ice-cream-right">
 
-        <h1>Ice Cream Broken Report Form</h1> 
-        <form id="form">
- 
-            <!-- Details -->
-            <div class="form-control">
-                <label for="name" id="label-name">
-                    Report
-                </label>
-     
-                <!-- Input Type Text -->
-                <input type="text"
-                       id="name"
-                       placeholder="Enter your GW Email" />
-            </div>
-
-
-            <div class="form-control">
-                <label>
-                    Is it working?
-                </label>
-                <br>
-                <br>
-                <!-- Yes / no -->
-                <label for="recommed-1">
-                    <button id="op-1"
-                            type="button" class="btn btn-success">Yes</button>
-                </label>
-                <br><br>
-                <label for="recommed-2">
-                    <button id="op-2"
-                            type="button" class="btn btn-danger">No</button>
-                </label>
-            </div>
-            <br>
-            <br>
-            <!-- Submission -->
-            <button type="button" id="submit">
-                Submit
-            </button>
-        </form> 
+        <!--Spinning Ice Cream Image Left-->
+        <img src="../assets/Crying.gif" height="300" width="300" class="ice-cream-left">
+        
     </main>
     
     <script type="module">
